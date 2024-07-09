@@ -1,7 +1,12 @@
 package way.application.service.member.dto;
 
-public record MemberDto(
+import way.application.infrastructure.member.contant.Gender;
 
+public record MemberDto(
+	Integer birth,
+	Gender gender,
+	String nickName,
+	String password
 ) {
 
 }
