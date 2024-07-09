@@ -13,6 +13,9 @@ public enum ErrorResult {
 	DTO_BAD_REQUEST_EXCEPTION(HttpStatus.BAD_REQUEST, "DTO Bad Request Exception", "DB001"),
 	MEMBER_SEQ_BAD_REQUEST_EXCEPTION(HttpStatus.BAD_REQUEST, "Member Seq Bad Request Exception", "MSB002"),
 
+	// NOT_FOUND
+	MEMBER_NICK_NAME_NOT_FOUND_EXCEPTION(HttpStatus.NOT_FOUND, "Member Nick Name Not Found Exception", "MNMN001"),
+
 	// CONFLICT
 	NICK_NAME_ALREADY_EXIST_CONFLICT_EXCEPTION(HttpStatus.CONFLICT, "Nick Name Already Exist Conflict Exception", "NNAEC001"),
 

@@ -1,8 +1,5 @@
 package way.application.infrastructure.member.repository;
 
-import java.util.Collections;
-import java.util.List;
-
 import org.springframework.stereotype.Component;
 
 import lombok.RequiredArgsConstructor;
@@ -26,5 +23,11 @@ public class MemberRepositoryImpl implements MemberRepository {
 	@Override
 	public MemberEntity saveMemberEntity(MemberEntity memberEntity) {
 		return memberJpaRepository.save(memberEntity);
+	}
+
+	@Override
+	public MemberEntity findByMemberNickName(String nickName) {
+		return memberJpaRepository.findByNickName(nickName)
+			.orElseThrow(() -> new BadRequestException(ErrorResult.MEMBER_NICK_NAME_NOT_FOUND_EXCEPTION));
 	}
 }
