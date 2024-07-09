@@ -5,6 +5,8 @@ import org.hibernate.annotations.DynamicUpdate;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -13,6 +15,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import way.application.infrastructure.member.contant.Gender;
 
 @Entity
 @Table(name = "MEMBER")
@@ -27,4 +30,17 @@ public class MemberEntity {
 	@Column(name = "member_seq")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long memberSeq;
+
+	@Column(name = "birth", nullable = false)
+	private Integer birth;
+
+	@Column(name = "gender", nullable = false)
+	private Gender gender;
+
+	@Column(name = "nick_name", nullable = false)
+	@Enumerated(EnumType.STRING)
+	private String nickName;
+
+	@Column(name = "password", nullable = false)
+	private String password;
 }
