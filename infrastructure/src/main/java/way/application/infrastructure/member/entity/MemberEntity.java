@@ -35,10 +35,10 @@ public class MemberEntity {
 	private Integer birth;
 
 	@Column(name = "gender", nullable = false)
+	@Enumerated(EnumType.STRING)
 	private Gender gender;
 
 	@Column(name = "nick_name", nullable = false)
-	@Enumerated(EnumType.STRING)
 	private String nickName;
 
 	@Column(name = "password", nullable = false)

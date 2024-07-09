@@ -10,10 +10,11 @@ import lombok.RequiredArgsConstructor;
 public enum ErrorResult {
 
 	// BAD_REQUEST
-	DTO_BAD_REQUEST_EXCEPTION(HttpStatus.BAD_REQUEST, "BTO Bad Request Exception", "B001"),
-	MEMBER_SEQ_BAD_REQUEST_EXCEPTION(HttpStatus.BAD_REQUEST, "MEMBER_SEQ_BAD_REQUEST_EXCEPTION", "MSB002"),
+	DTO_BAD_REQUEST_EXCEPTION(HttpStatus.BAD_REQUEST, "DTO Bad Request Exception", "DB001"),
+	MEMBER_SEQ_BAD_REQUEST_EXCEPTION(HttpStatus.BAD_REQUEST, "Member Seq Bad Request Exception", "MSB002"),
 
 	// CONFLICT
+	NICK_NAME_ALREADY_EXIST_CONFLICT_EXCEPTION(HttpStatus.CONFLICT, "Nick Name Already Exist Conflict Exception", "NNAEC001"),
 
 	// SERVER
 	UNKNOWN_EXCEPTION(HttpStatus.INTERNAL_SERVER_ERROR, "Unknown Exception", "S500"),
